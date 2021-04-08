@@ -1,62 +1,35 @@
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: Subnet
 metadata:
-  name: east-1d
+  name: west-2a
   labels:
-    zone: us-east-1d
+    zone: us-west-2a
     access: public
-    networks.aws.crossflux.io/network-id: default
-  annotations:
-    crossplane.io/external-name: subnet-6aaa5127
+    networks.aws.crossflux.io/network-id: my-crossplane-vpc
 spec:
   forProvider:
-    region: us-east-1
+    region: us-west-2
     mapPublicIPOnLaunch: true
     cidrBlock: 172.31.16.0/20
-    availabilityZone: us-east-1d
+    availabilityZone: us-west-2a
     tags:
       - key: kubernetes.io/role/elb
         value: "1"
-  deletionPolicy: Orphan
 ---
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: Subnet
 metadata:
-  name: east-1b
+  name: west-2b
   labels:
-    zone: us-east-1b
+    zone: us-west-2b
     access: public
-    networks.aws.crossflux.io/network-id: default
-  annotations:
-    crossplane.io/external-name: subnet-4ccde52b
+    networks.aws.crossflux.io/network-id: my-crossplane-vpc
 spec:
   forProvider:
-    region: us-east-1
+    region: us-west-2
     mapPublicIPOnLaunch: true
     cidrBlock: 172.31.0.0/20
-    availabilityZone: us-east-1b
+    availabilityZone: us-west-2b
     tags:
       - key: kubernetes.io/role/elb
         value: "1"
-  deletionPolicy: Orphan
----
-apiVersion: ec2.aws.crossplane.io/v1beta1
-kind: Subnet
-metadata:
-  name: east-1a
-  labels:
-    zone: us-east-1a
-    access: public
-    networks.aws.crossflux.io/network-id: default
-  annotations:
-    crossplane.io/external-name: subnet-2f556173
-spec:
-  forProvider:
-    region: us-east-1
-    mapPublicIPOnLaunch: true
-    cidrBlock: 172.31.32.0/20
-    availabilityZone: us-east-1a
-    tags:
-      - key: kubernetes.io/role/elb
-        value: "1"
-  deletionPolicy: Orphan

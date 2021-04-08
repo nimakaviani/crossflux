@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  url: ssh://git@github.com/hasheddan/crossflux.git
+  url: ssh://git@github.com/nimakaviani/crossflux.git
   secretRef:
     name: git-deploy-key
   ref:
