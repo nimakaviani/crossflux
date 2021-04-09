@@ -5,7 +5,7 @@ metadata:
   labels:
     zone: us-west-2a
     access: public
-    networks.aws.crossflux.io/network-id: my-crossplane-vpc
+    networks.aws.crossflux.io/network-id: default
 spec:
   forProvider:
     region: us-west-2
@@ -23,7 +23,7 @@ metadata:
   labels:
     zone: us-west-2b
     access: public
-    networks.aws.crossflux.io/network-id: my-crossplane-vpc
+    networks.aws.crossflux.io/network-id: default
 spec:
   forProvider:
     region: us-west-2
