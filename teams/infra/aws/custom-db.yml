@@ -1,9 +1,12 @@
 apiVersion: database.crossflux.io/v1alpha1
-kind: CompositeIntance
+kind: Instance
 metadata:
   name: my-db
   labels:
     db.aws.crossflux.io/db-id: default
 spec:
-  storageGB: 10
-  dbName: myDb
+  parameters:
+    storageGB: 10
+    dbName: myDb
+  writeConnectionSecretToRef:
+    name: app1-db
