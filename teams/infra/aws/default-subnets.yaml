@@ -12,6 +12,8 @@ spec:
     mapPublicIPOnLaunch: true
     cidrBlock: 172.31.16.0/20
     availabilityZone: us-west-2a
+    vpcRef:
+      name: my-crossplane-vpc
     tags:
       - key: kubernetes.io/role/elb
         value: "1"
@@ -30,6 +32,8 @@ spec:
     mapPublicIPOnLaunch: true
     cidrBlock: 172.31.0.0/20
     availabilityZone: us-west-2b
+    vpcRef:
+      name: my-crossplane-vpc
     tags:
       - key: kubernetes.io/role/elb
         value: "1"
