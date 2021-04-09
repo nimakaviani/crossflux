@@ -1,5 +1,5 @@
 apiVersion: database.crossflux.io/v1alpha1
-kind: Intance
+kind: CompositeIntance
 metadata:
   name: my-db
   labels:
