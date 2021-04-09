@@ -15,7 +15,7 @@ spec:
         kind: DBSubnetGroup
         spec:
           forProvider:
-            region: us-east-1
+            region: us-west-2
             description: An excellent formation of subnetworks.
             subnetIdSelector:
               matchLabels:
@@ -26,7 +26,7 @@ spec:
         kind: RDSInstance
         spec:
           forProvider:
-            region: us-east-1
+            region: us-west-2
             dbSubnetGroupNameSelector:
               matchControllerRef: true
             dbInstanceClass: db.t2.small
