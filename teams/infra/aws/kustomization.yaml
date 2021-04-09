@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - default-vpc.yaml
   - default-subnets.yaml
+  - custom-db.yml

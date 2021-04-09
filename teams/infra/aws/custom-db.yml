@@ -1,0 +1,9 @@
+apiVersion: database.crossflux.io/v1alpha1
+kind: Intance
+metadata:
+  name: my-db
+  labels:
+    db.aws.crossflux.io/db-id: default
+spec:
+  storageGB: 10
+  dbName: myDb
