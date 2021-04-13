@@ -23,4 +23,7 @@ spec:
     region: us-west-2
     groupName: my-crossplane-vpc
     description: my VPC security group - updated
+    vpcIdSelector:
+      matchLabels:
+        networks.aws.crossflux.io/network-id: default
   deletionPolicy: Orphan
